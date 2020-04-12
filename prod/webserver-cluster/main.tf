@@ -41,7 +41,7 @@ resource "aws_autoscaling_schedule" "scale_in_at_night" {
 # Define WebCluster parameter
 # --------------------------------------
 module "webserver_cluster" {
-	source = "/home/alain/terraform/modules/services/webserver-cluster"
+	source						= "git::git@github.com:apalenzuela/tf_modules.git//services/webserver-cluster?ref=v0.0.1"
  
 	elb_env						= "prod"
 
